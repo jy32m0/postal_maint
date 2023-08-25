@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetailFragment">
+
+        <TextView
+            android:id="@+id/equip_name"
+            style="@style/LayoutDetail"
+            android:layout_marginTop="16dp"
+            android:paddingEnd="4dp"
+            android:text="equip_name"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/equip_num"
+            style="@style/LayoutDetail"
+            android:layout_marginTop="16dp"
+            android:paddingStart="4dp"
+            android:text="equip_num"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/equip_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/call_time"
+            style="@style/LayoutDetail"
+            android:layout_marginTop="16dp"
+            android:paddingStart="4dp"
+            android:text="call_time"
+            app:layout_constraintStart_toEndOf="@id/equip_num"
+            app:layout_constraintBottom_toBottomOf="@id/equip_num" />
+
+        <TextView
+            android:id="@+id/clear_time"
+            style="@style/LayoutDetail"
+            android:text="clear_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/equip_name" />
+
+        <TextView
+            android:id="@+id/down_time"
+            style="@style/LayoutDetail"
+            android:text="down_time"
+            app:layout_constraintStart_toEndOf="@id/clear_time"
+            app:layout_constraintTop_toBottomOf="@id/equip_num" />
+
+        <TextView
+            android:id="@+id/call_reason"
+            style="@style/LayoutDetail"
+            android:layout_width="match_parent"
+            android:text="call_reason"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/down_time" />
+
+        <TextView
+            android:id="@+id/clear_solution"
+            style="@style/LayoutDetail"
+            android:layout_width="match_parent"
+            android:text="clear_solution"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/call_reason" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

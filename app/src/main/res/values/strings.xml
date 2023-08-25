@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Maintenance Call Log</string>
+    <string name="aboutText">Maintenance Call Log
+                                        Version: 1.0.0
+                                        Device</string>
+    <!--    Equipment Fragment-->
+    <string name="btnAFCS">AFCS</string>
+    <string name="btnDBCS">DB/C/DIOSS</string>
+    <string name="btnAFSM">AFSM</string>
+    <string name="btnAPBS">APBS</string>
+    <string name="btnSSM">SSM</string>
+    <string name="btnOthers">OTHERS</string>
+
+    <string name="btnCancel">CANCEL</string>
+
+    <string name="called_at">Called at:\u0020</string>
+    <string name="cleared_at">Cleared at:\u0020</string>
+    <string name="down_time">Downed Total:\u0020</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

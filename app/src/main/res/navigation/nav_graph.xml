@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="@string/app_name"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rayko.postalmaint.ui.frags.HomeFragment"
+        android:label="Equipment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_equipmentFragment_to_equipIdFragment"
+            app:destination="@id/dbFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_equipmentFragment_to_miscEquipIdFragment"
+            app:destination="@id/miscEquipFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_equipmentFragment_to_logFragment"
+            app:destination="@id/logFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_equipmentFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dbFragment"
+        android:name="com.rayko.postalmaint.ui.frags.DbFragment"
+        android:label="Equipment ID"
+        tools:layout="@layout/fragment_db">
+        <action
+            android:id="@+id/action_equipIdFragment_to_logFragment"
+            app:destination="@id/logFragment"
+            app:popUpTo="@id/dbFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/miscEquipFragment"
+        android:name="com.rayko.postalmaint.ui.frags.MiscEquipFragment"
+        tools:layout="@layout/fragment_misc_equip">
+        <action
+            android:id="@+id/action_miscEquipIdFragment_to_logFragment"
+            app:destination="@id/logFragment"
+            app:popUpTo="@id/miscEquipFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="equipType"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.rayko.postalmaint.ui.frags.AboutFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/logFragment"
+        android:name="com.rayko.postalmaint.ui.frags.LogFragment"
+        android:label="Log Record"
+        tools:layout="@layout/fragment_log">
+        <action
+            android:id="@+id/action_logFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:popUpTo="@id/logFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="equipType"
+            android:defaultValue="null"
+            app:argType="string" />
+        <argument
+            android:name="machId"
+            android:defaultValue="null"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.rayko.postalmaint.ui.frags.DetailFragment"
+        android:label="{equipType}"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="equipType"
+            android:defaultValue="null"
+            app:argType="string" />
+        <argument
+            android:name="equipID"
+            android:defaultValue="null"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

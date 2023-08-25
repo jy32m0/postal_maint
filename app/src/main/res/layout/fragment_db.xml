@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.frags.DbFragment">
+
+        <ScrollView
+            android:id="@+id/scrollViewDb"
+            style="@style/Scroll"
+            android:contentDescription="List of DB-based equipment"
+            app:layout_constraintBottom_toTopOf="@id/buttonDbCancel"
+            app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonDIOSS15"
+                    style="@style/ButtonDB"
+                    android:text="DIOSS 15"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDIOSS16"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonDIOSS16"
+                    style="@style/ButtonDB"
+                    android:text="DIOSS 16"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB01"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDIOSS15" />
+
+                <Button
+                    android:id="@+id/buttonDB01"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 01"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB02"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDIOSS16" />
+
+                <Button
+                    android:id="@+id/buttonDB02"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 02"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB05"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB01" />
+
+                <Button
+                    android:id="@+id/buttonDB05"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 05"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB09"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB02" />
+
+                <Button
+                    android:id="@+id/buttonDB09"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 09"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB10"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB05" />
+
+                <Button
+                    android:id="@+id/buttonDB10"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 10"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB12"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB09" />
+
+                <Button
+                    android:id="@+id/buttonDB12"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 12"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB13"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB10" />
+
+                <Button
+                    android:id="@+id/buttonDB13"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 13"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB17"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB12" />
+
+                <Button
+                    android:id="@+id/buttonDB17"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 17"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB18"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB13" />
+
+                <Button
+                    android:id="@+id/buttonDB18"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 18"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB19"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB17" />
+
+                <Button
+                    android:id="@+id/buttonDB19"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 19"
+                    app:layout_constraintBottom_toTopOf="@id/buttonDB20"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB18" />
+
+                <Button
+                    android:id="@+id/buttonDB20"
+                    style="@style/ButtonDB"
+                    android:text="DBCS 20"
+                    app:layout_constraintBottom_toTopOf="@id/buttonCIOSS02"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB19" />
+
+                <Button
+                    android:id="@+id/buttonCIOSS02"
+                    style="@style/ButtonDB"
+                    android:text="CIOSS 02"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+                    app:layout_constraintTop_toBottomOf="@id/buttonDB20" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/buttonDbCancel"
+            style="@style/ButtonDB"
+            android:layout_width="0dp"
+            android:backgroundTint="@color/design_default_color_error"
+            android:text="@string/btnCancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineDbRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineDbLeft"
+            app:layout_constraintTop_toBottomOf="@id/scrollViewDb" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineDbLeft"
+            style="@style/GuidelineDB"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineDbRight"
+            style="@style/GuidelineDB"
+            app:layout_constraintGuide_percent="0.75" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

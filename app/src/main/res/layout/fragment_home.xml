@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.frags.HomeFragment">
+
+        <ScrollView
+            android:id="@+id/scrollViewEquip"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnAFCS"
+                    style="@style/ButtonHome"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/btnAFCS"
+                    app:layout_constraintBottom_toTopOf="@id/btnDBCS"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineLeft"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnDBCS"
+                    style="@style/ButtonHome"
+                    android:text="@string/btnDBCS"
+                    app:layout_constraintBottom_toTopOf="@id/btnAFSM"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/btnAFCS" />
+
+                <Button
+                    android:id="@+id/btnAFSM"
+                    style="@style/ButtonHome"
+                    android:text="@string/btnAFSM"
+                    app:layout_constraintBottom_toTopOf="@id/btnAPBS"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/btnDBCS" />
+
+                <Button
+                    android:id="@+id/btnAPBS"
+                    style="@style/ButtonHome"
+                    android:text="@string/btnAPBS"
+                    app:layout_constraintBottom_toTopOf="@id/btnSSM"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/btnAFSM" />
+
+                <Button
+                    android:id="@+id/btnSSM"
+                    style="@style/ButtonHome"
+                    android:text="@string/btnSSM"
+                    app:layout_constraintBottom_toTopOf="@id/btnOthers"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/btnAPBS" />
+
+                <Button
+                    android:id="@+id/btnOthers"
+                    style="@style/ButtonHome"
+                    android:text="@string/btnOthers"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/btnSSM" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            style="@style/GuidelineHome"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            style="@style/GuidelineHome"
+            app:layout_constraintGuide_percent="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
